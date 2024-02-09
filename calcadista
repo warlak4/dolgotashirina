@@ -15,14 +15,14 @@ public class Main {
             double dolgota2 = Math.toRadians(in.nextDouble());
             in.nextLine();
             
-            double r = 6378.1;
+            fianl RADIUS = 6378.1;
             double dshirota = shirota2 - shirota1;
             double ddolgota = dolgota2 - dolgota1;
             
             double a = Math.sin(dshirota / 2) * Math.sin(dshirota / 2) + Math.sin(ddolgota / 2) * Math.sin(ddolgota / 2) * Math.cos(shirota1) * Math.cos(shirota2);
             
             double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-            double distance = r * c;
+            double distance = RADIUS * c;
             
             System.out.println(distance + " км\n");
             System.out.println("'stop' для отсановки программы Enter = продолжить");
